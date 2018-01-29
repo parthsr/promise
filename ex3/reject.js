@@ -4,6 +4,12 @@ const promise = new Promise((fullfil, reject) => {
   }, 300);
 });
 
+
+const onReject = (msg) => {
+  console.log(msg);
+};
+promise.then(onReject);
 module.exports = {
   promise,
+  onReject,
 };
