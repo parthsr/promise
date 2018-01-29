@@ -1,4 +1,4 @@
-newpromise = new Promise((resolve) => {
+const newpromise = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve('FULFILLED!');
   }, 300);
