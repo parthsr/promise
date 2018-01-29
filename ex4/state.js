@@ -9,4 +9,7 @@ const onRejected = (error) => {
 
 promise.then(console.log, onRejected);
 
-module.exports = promise;
+module.exports = {
+  promise,
+  onRejected,
+};
