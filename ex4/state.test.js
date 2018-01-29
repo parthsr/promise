@@ -12,4 +12,9 @@ describe('checking use case', () => {
     state.onRejected('hello');
     expect((console.log)).toHaveBeenCalledTimes(1);
   });
+  it('testCase 4 for checking onReject when reject', () => {
+    (global.console.log) = jest.fn();
+    state.onRejected(new Error('kk'));
+    expect((console.log)).toHaveBeenCalledTimes(1);
+  });
 });
