@@ -9,10 +9,12 @@ const onReject = (msg) => {
   if (msg === null || msg === undefined) {
     return false;
   }
-  console.log(msg);
+  console.log(msg.message);
   return true;
 };
-promise.then(onReject);
+
+promise.then(() => {}, onReject);
+
 module.exports = {
   promise,
   onReject,
