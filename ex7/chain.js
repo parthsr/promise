@@ -12,11 +12,12 @@ const second = (values) => {
   return Promise2;
 };
 //
-// const firstPromise = first();
-// const secondPromise = firstPromise.then(values => second(values));
+const firstPromise = first();
+const secondPromise = firstPromise.then(values => second(values));
 // secondPromise.then(console.log);
 
 module.exports = {
   first,
   second,
+  secondPromise,
 };
