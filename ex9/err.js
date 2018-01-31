@@ -11,3 +11,5 @@ const parsePromised = (json) => {
   return createPromise;
 };
 parsePromised(process.argv[2]).then(null, console.log);
+
+module.exports = parsePromised;
