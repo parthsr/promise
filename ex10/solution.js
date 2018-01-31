@@ -17,10 +17,14 @@ let promise = Promise.resolve(iterate(1))
   .then(iterate)
   .then(iterate)
   .then(iterate)
-  .catch((value) => {
+  .then(null, (value) => {
     console.log(value.message);
     return value.message;
   });
+  // //catch((value) => {
+  //   console.log(value.message);
+  //   return value.message;
+  // });
 
 module.exports = {
   alwaysThrows,
